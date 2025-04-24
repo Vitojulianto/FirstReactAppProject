@@ -1,13 +1,15 @@
 import React from 'react'
 import Index from '../components/Input/Index'
 import Button from '../components/Button/Button'
+import {useNavigate} from 'react-router-dom'
 
 const FormLogin = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         localStorage.setItem('username',e.target.username.value)
         localStorage.setItem('password',e.target.password.value)
-        window.location.href = '/dashboard'
+        const navigate = useNavigate();
+        navigate('/dashboard');
     }
   return (
     <div>
