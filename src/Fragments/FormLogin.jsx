@@ -4,11 +4,12 @@ import Button from '../components/Button/Button'
 import {useNavigate} from 'react-router-dom'
 
 const FormLogin = () => {
+    const navigate = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault()
         localStorage.setItem('username',e.target.username.value)
         localStorage.setItem('password',e.target.password.value)
-        const navigate = useNavigate();
+        
         navigate('/dashboard');
     }
   return (
