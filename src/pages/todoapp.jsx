@@ -11,8 +11,6 @@ const Todoapp = () => {
   }
 
   const handleAdd = () => {
-    if (input.trim() === "") return; // Cek jika input kosong
-
     const newTask = {
       id: Date.now(),
       text: input
